@@ -12,7 +12,7 @@ single HTML elements.
 
 You can control the type of the element by using the `#:type` argument, it can
 be either `sc` (self closing) or `void`. It's also important to note, that the
-first string argument will be escaped and obviously its not intended to contain
+first string argument will be escaped and obviously it's not intended to contain
 any HTML.
 
 <sub>Guile</sub>
@@ -70,11 +70,11 @@ Here's a list of these attributes:
 
 The `inner` argument can take a string or a list of child elements, but we'll
 look at adding inner elements later. For now when the `inner` argument is given
-a string, it will use it as the inner text. By default the given string will
-always be escaped.
+a string, it will use it as the inner text. By default the given string will be 
+escaped.
 
 If you want to inject a raw string, you can do so using the `inner!` argument,
-it onlt accepts a string and will not perform any escaping.
+it only accepts a string and will not perform any escaping.
 
 <sub>Guile</sub>
 
@@ -94,7 +94,7 @@ it onlt accepts a string and will not perform any escaping.
 
 ### Adding child elements:
 
-As stated earlier, the `inner` argument can also take a list of list of
+As stated earlier, the `inner` argument can also take a list of, lists of
 arguments. These inner argument lists will be recursively applied to the
 `markup-el` procedure. This means that each of the inner quoted list can contain
 any of the arguments accepted by the `markup-el` method.
@@ -187,8 +187,8 @@ control over it. The first thing you can do is set the indentation size using
 
 In addition to the `set-indentation-size` helper, you can also specify the
 indentation level of each element using the `#:lvl` argument. The level argument
-allows you to shift an element and its children up or down. A level is absically this
-`indentation-size * lvl`.
+allows you to shift an element and its children up or down. A level is basically 
+this: `indentation-size * lvl`.
 
 ```scheme
 (markup-el "div" #:lvl 5
